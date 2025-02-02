@@ -1,0 +1,4 @@
+FROM amacneil/dbmate:2.0.1
+
+COPY src/db/migrations/ /db/migrations/
+ENTRYPOINT ["/usr/local/bin/dbmate", "--wait", "up"]

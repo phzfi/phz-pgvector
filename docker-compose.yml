@@ -1,0 +1,23 @@
+#Note! docker-compose.yml is the dev env by PHZ convention. See https://wiki.phz.fi/Course_DevEnv
+services:
+
+  vector-db:
+    image: pgvector/pgvector:pg16
+    restart: always
+    env_file:
+     - .env.dev
+    volumes:
+      - ./data/16:/var/lib/postgresql/data
+    ports:
+      - 5432:5432 #Note! Please add (reserve) external port (the first value) to https://wiki.phz.fi/Docker#Ports so that there are no conflicts with other projects (on CI)
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  dbmate:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile-dbmate
+    restart: no
+    env_file:
+    # dbmate uses DATABASE_URL
+      - .env.dev
