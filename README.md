@@ -27,8 +27,7 @@ Dev
 
 CI
 * use dev -env on ci.in.phz.fi + Jenkins executors running Docker or Vagrant/Virtualbox.
-* Jenkins
-* (do not use Gitlab CI, or AWS Code Deploy or other CI unless you have a permission from management, can rationalize the exception to management and you know what you are doing)
+* PHZ Jenkins
 * Nothing should be run outside virtualization and everything should be wrapped inside the container/virtual machine
 * do not pin the projects down on any individual executor, but set up the builds so that they can be run on any executor machine
 
