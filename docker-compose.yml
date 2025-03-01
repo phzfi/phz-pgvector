@@ -1,4 +1,4 @@
-#Note! docker-compose.yml is the dev env by PHZ convention. See https://wiki.phz.fi/Course_DevEnv
+#Note! docker-compose.yml is the dev env by PHZ convention.
 services:
 
   vector-db:
@@ -10,7 +10,7 @@ services:
       - ./src/db/init.sql:/docker-entrypoint-initdb.d/init.sql
       - ./data/16:/var/lib/postgresql/data
     ports:
-      - 5432:5432 #Note! Please add (reserve) external port (the first value) to https://wiki.phz.fi/Docker#Ports so that there are no conflicts with other projects (on CI)
+      - 5432:5432
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
