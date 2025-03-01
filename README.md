@@ -84,7 +84,7 @@ Status
 ### 3.3. Access the Application
 
     docker ps
-    docker exec -it phz-pgvector-vector-db-1 psql -U pgvector cv
+    docker exec -it phz-pgvector-vector-db-1 psql -U pgvector data
 
 ### 3.4. Run Tests
 

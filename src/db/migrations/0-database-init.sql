@@ -5,7 +5,7 @@
 -- Created a schema so that granting privileges to certain users is more controlled and clear. This on the other hand makes naming less explicit
 CREATE EXTENSION vector;
 
-CREATE TABLE IF NOT EXISTS cvs (
+CREATE TABLE IF NOT EXISTS data (
   id bigserial PRIMARY KEY,
   embedding vector(3)
 );
