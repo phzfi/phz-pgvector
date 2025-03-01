@@ -2,7 +2,9 @@
 
 ## 1. Project Description
 
-PGVector store for n8n embeddings
+Postgres based PGVector- vector store for embeddings. Can be used for AI projects or other usages where you need vectors. 
+
+This project setups automatically pgvector extensions to postgres, which otherwise require some manual provisionings.
 
 ### 1.1. Business Vision
 
