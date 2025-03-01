@@ -2,7 +2,9 @@
 
 ## 1. Project Description
 
-PGVector store for n8n embeddings
+Postgres based PGVector- vector store for embeddings. Can be used for AI projects or other usages where you need vectors. 
+
+This project setups automatically pgvector extensions to postgres, which otherwise require some manual provisionings.
 
 ### 1.1. Business Vision
 
@@ -83,8 +85,19 @@ Status
 
 ### 3.3. Access the Application
 
+Database Connection
+
+    host.docker.internal:5432
+
+    Username: pgvector
+    Password: <empty>
+
+PSQL
+
     docker ps
     docker exec -it phz-pgvector-vector-db-1 psql -U pgvector data
+
+
 
 ### 3.4. Run Tests
 
