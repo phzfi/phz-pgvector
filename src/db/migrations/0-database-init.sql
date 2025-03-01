@@ -5,11 +5,12 @@
 -- Created a schema so that granting privileges to certain users is more controlled and clear. This on the other hand makes naming less explicit
 CREATE EXTENSION vector;
 
+-- note! n8n creates the tables automatically
 CREATE TABLE IF NOT EXISTS data (
-  id BIGSERIAL PRIMARY KEY,
-  embedding VECTOR(3),
+  id UUID PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),
   text TEXT,
-  metadata TEXT
+  metadata JSONB,
+  embedding VECTOR(3)
 );
 
 -- REVOKE ALL PRIVILEGES ON SCHEMA n8n FROM public;
