@@ -85,8 +85,19 @@ Status
 
 ### 3.3. Access the Application
 
+Database Connection
+
+    host.docker.internal:5432
+
+    Username: pgvector
+    Password: <empty>
+
+PSQL
+
     docker ps
     docker exec -it phz-pgvector-vector-db-1 psql -U pgvector cv
+
+
 
 ### 3.4. Run Tests
 
