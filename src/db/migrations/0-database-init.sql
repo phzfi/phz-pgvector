@@ -6,8 +6,10 @@
 CREATE EXTENSION vector;
 
 CREATE TABLE IF NOT EXISTS data (
-  id bigserial PRIMARY KEY,
-  embedding vector(3)
+  id BIGSERIAL PRIMARY KEY,
+  embedding VECTOR(3),
+  text TEXT,
+  metadata TEXT
 );
 
 -- REVOKE ALL PRIVILEGES ON SCHEMA n8n FROM public;
