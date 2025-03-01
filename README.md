@@ -6,7 +6,7 @@ PGVector store for n8n embeddings
 
 ### 1.1. Business Vision
 
-Use self-hosted vector store for free and for dev envs
+Use self-hosted vector store for free and for dev envs. Licensed under MIT license.
 
 ### 1.2. Task Management
 
